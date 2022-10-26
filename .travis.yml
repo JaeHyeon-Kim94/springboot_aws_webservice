@@ -22,7 +22,7 @@ before_deploy:
   - cp scripts/*.sh before-deploy/
   - cp appspec.yml before-deploy/
   - cp build/libs/*.jar before-deploy/
-  - cp before-deploy && zip -r before-deploy * #-r : 폴더 및 그 하위에 있는 모든 폴더 및 파일들을 모두 압축
+  - cd before-deploy && zip -r before-deploy * #-r : 폴더 및 그 하위에 있는 모든 폴더 및 파일들을 모두 압축
   - cd ../ && mkdir -p deploy
   - mv before-deploy/before-deploy.zip deploy/springboot_aws_webservice.zip
 
