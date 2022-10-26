@@ -7,7 +7,7 @@ echo "> Build 파일 복사"
 cp $REPOSITORY/zip/*.jar $REPOSITORY/
 
 echo "> 현재 구동 중인 애플리케이션 pid 확인"
-CURRENT_PID=$(pgrep -fl springboot_aws_webservice | grep jar | awk '{print $1}')
+CURRENT_PID=$(pgrep -fl springboot_aws_webservice | grep java | awk '{print $1}')
 # | : 전 단게에서 얻은 결과를 다음 프로그램으로 넘겨주면서 작업이 진행됨.
 # pgrep >> -fl옵션과 함께 실행하면 명령어의 경로 출력. ex) 14777 springboot_aws_webservice.jar
 # grep >> jar 있는지 검색.
